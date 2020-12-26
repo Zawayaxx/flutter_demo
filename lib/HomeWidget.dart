@@ -17,6 +17,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             "首页",
             style: TextStyle(color: Colors.black),
           ),
+          brightness: Brightness.light,
           backgroundColor: Colors.white,
         ),
         body: Column(
