@@ -1,10 +1,9 @@
 class HomeListData {
   String title;
-  double rating;
-  String directors;
-  String casts;
-  int watchedPeople;
+  String money;
+  String count;
+  String endTime;
   String images;
 
-  HomeListData(this.title,this.rating,this.directors,this.casts,this.watchedPeople,this.images);
+  HomeListData(this.title, this.money, this.count, this.endTime, this.images);
 }

@@ -14,8 +14,8 @@ class _HomeListWidgetState extends State<HomeListWidget> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    var data = HomeListData('反贪风暴4', 6.3, '林德禄', '古天乐/郑嘉颖/林峯', 29013,
-        'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp');
+
+    var data = HomeListData("apple", "2.24万亿美元", "10", "预计06.00结束", "http://www.patrickvale.co.uk/getmedia/276e7f15-4eac-4514-a1c0-64a3b5b26242/apple1.jpg?width=900&height=550&ext=.jpg");
     setState(() {
       homeList.add(data);
       homeList.add(data);

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/HomeListData/HomeListData.dart';
 
 class HomeListItemWidget extends StatefulWidget {
-
   HomeListData homeListData;
 
   HomeListItemWidget(this.homeListData);
@@ -15,17 +14,20 @@ class _HomeListItemWidgetState extends State<HomeListItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
-      padding: EdgeInsets.all(20),
+      height: 140,
+      padding: EdgeInsets.all(10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network(
-            widget.homeListData.images,
-            width: 80,
-            height: 120,
-            fit: BoxFit.cover,
-          ),
+          Container(
+              width: 120,
+              height: 120,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          widget.homeListData.images),
+                      fit: BoxFit.cover))),
           Expanded(
             flex: 1,
             child: Padding(
@@ -38,41 +40,36 @@ class _HomeListItemWidgetState extends State<HomeListItemWidget> {
                     widget.homeListData.title,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
-                  Text(
-                    widget.homeListData.rating.toString(),
-                    style: TextStyle(fontSize: 14, color: Colors.black54),
+                  Padding(padding: EdgeInsets.only(top: 10)),
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "RMB",
+                            style:
+                                TextStyle(fontSize: 14, color: Colors.black54),
+                          ),
+                          Text("当前价",
+                              style: TextStyle(
+                                  fontSize: 11, color: Colors.red)),
+                        ],
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 20)),
+                      Text("2.24万亿美元",
+                          style: TextStyle(fontSize: 18, color: Colors.red))
+                    ],
                   ),
-                  Text('导演: ' + widget.homeListData.directors,
+                  Padding(padding: EdgeInsets.only(top: 10)),
+                  Text("出价 1",
                       style: TextStyle(fontSize: 14, color: Colors.black54)),
-                  Text('主演: ' + widget.homeListData.casts,
+                  Padding(padding: EdgeInsets.only(top: 5)),
+                  Text("预计明天06:00结束",
                       style: TextStyle(fontSize: 14, color: Colors.black54)),
                 ],
               ),
             ),
           ),
-          Container(
-            width: 100,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  widget.homeListData.watchedPeople.toString() + '人看过',
-                  style: TextStyle(color: Colors.red, fontSize: 14),
-                ),
-                OutlineButton(
-                  child: Text(
-                    '购票',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  color: Colors.red,
-                  textColor: Colors.red,
-                  highlightedBorderColor: Colors.red,
-                  borderSide: BorderSide(color: Colors.red),
-                  onPressed: () {},
-                )
-              ],
-            ),
-          )
         ],
       ),
     );
