@@ -12,7 +12,13 @@ class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("首页")),
+        appBar: AppBar(
+          title: Text(
+            "首页",
+            style: TextStyle(color: Colors.black),
+          ),
+          backgroundColor: Colors.white,
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -36,19 +42,24 @@ class _HomeWidgetState extends State<HomeWidget> {
                             prefixIcon: Icon(Icons.search, color: Colors.grey),
                             hintText: '标的物名称/位置/案号',
                             hintStyle: TextStyle(
-                                fontFamily: 'MaterialIcons', fontSize: 15, color: Colors.grey),
+                                fontFamily: 'MaterialIcons',
+                                fontSize: 15,
+                                color: Colors.grey),
                             contentPadding: EdgeInsets.only(top: 8, bottom: 8),
                             border: OutlineInputBorder(
                               borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                             ),
                             filled: true,
                             fillColor: Colors.white),
-
                       ),
                     ),
                   ),
-                  Icon(Icons.map, color: Colors.white,),
+                  Icon(
+                    Icons.map,
+                    color: Colors.white,
+                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
