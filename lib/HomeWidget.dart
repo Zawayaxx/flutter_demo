@@ -79,6 +79,23 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ],
               ),
             ),
+            Container(
+              height: 40,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FlatButton(
+
+                    child: Text("默认排序"),
+                    onPressed: () {},
+                  ),
+                  Text("2"),
+                  Text("3"),
+                  Text("4"),
+                  Text("5"),
+                ],
+              ),
+            ),
             Expanded(
                 flex: 1,
                 child: DefaultTabController(
