@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+class MineWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MineWidgetState();
+  }
+}
+
+class _MineWidgetState extends State<MineWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("我的"),
+    );
+  }
+}
