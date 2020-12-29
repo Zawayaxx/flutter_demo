@@ -27,7 +27,6 @@ class _TabNavigatorState extends State<TabNavigator> {
         controller: _controller,
         children: <Widget>[
           HomePage(),
-          SearchPage(),
           LogisticsPage(),
           MinePage(),
         ],
@@ -44,9 +43,8 @@ class _TabNavigatorState extends State<TabNavigator> {
           type: BottomNavigationBarType.fixed,
           items: [
             _bottomItem('首页', Icons.home, 0),
-            _bottomItem('搜索', Icons.search, 1),
-            _bottomItem('物流', Icons.email, 2),
-            _bottomItem('我的', Icons.account_circle, 3),
+            _bottomItem('物流', Icons.email, 1),
+            _bottomItem('我的', Icons.account_circle, 2),
           ]),
     );
   }
